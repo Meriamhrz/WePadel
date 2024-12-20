@@ -1,0 +1,122 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    padding: 20px;
+    background: url("../assets/hero/hero-1.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 170px;
+    padding-bottom: 90px;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .welcome-back {
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .profile-card {
+    width: 100%;
+    max-width: 600px; /* Increased size for larger card */
+    background: rgba(255, 255, 255, 0.9); /* Add slight transparency for elegance */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  .user-detail {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between; /* Align labels and values */
+    align-items: center;
+  }
+  
+  .user-detail h6 {
+    color: #0f3053;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .user-detail .card-text {
+    color: #343a40;
+    font-size: 1rem;
+    text-align: right;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between; /* Space between the buttons */
+    align-items: center; /* Align items vertically */
+    margin-top: 20px;
+  }
+  
+  .action-buttons .btn {
+    width: 48%; /* Ensure buttons are evenly sized */
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  
+  .modal-content {
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-header {
+    background: #0f3053;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .modal-footer .btn {
+    background: #0f3053;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    transition: background 0.3s ease;
+  }
+  
+  .modal-footer .btn:hover {
+    background: #09283d;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-card {
+      padding: 15px;
+    }
+  
+    .welcome-back {
+      font-size: 1.5rem;
+    }
+  
+    .user-detail h6 {
+      font-size: 1rem;
+    }
+  
+    .user-detail .card-text {
+      font-size: 0.9rem;
+    }
+  }
+  

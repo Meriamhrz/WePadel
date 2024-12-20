@@ -1,0 +1,92 @@
+
+.item-card-container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.item-card-container:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.item-card-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item-card-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.item-card-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+
+.item-card-delete {
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.item-card-delete:hover {
+  color: #f44336;
+}
+
+.item-card-quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantity-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quantity-btn:hover {
+  background-color: #f1f1f1;
+  border-color: #bbb;
+}
+
+.item-quantity {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.item-card-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.item-card-total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  text-align: right;
+}

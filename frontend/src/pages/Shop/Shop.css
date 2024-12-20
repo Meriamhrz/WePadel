@@ -1,0 +1,32 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.shop-container {
+  display: flex;
+  height: 100vh; /* Full height */
+  width: 100%; /* Full width */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px; /* Fixed width */
+  padding: 20px;
+}
+
+
+.shopbody {
+  flex: 1; /* Takes remaining space */
+  background-color: #f4f4f4;
+  padding-left: 80px;
+  margin-top: 50px;
+  overflow-y: auto; /* Add scroll if content overflows */
+
+}
