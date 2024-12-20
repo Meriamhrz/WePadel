@@ -9,7 +9,7 @@ import Form from "react-bootstrap/Form";
 import Layout from "../components/Layouts/Layout";
 
 function Profile() {
-  const url = "http://localhost:8080/api/users";
+  const url = "https://wepadel.onrender.com//api/users";
   const [user, setUser] = useState({});
   const [userId, setUserId] = useState(null); // Use state for userId
   const [show, setShow] = useState(false);

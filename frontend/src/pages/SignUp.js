@@ -10,7 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function SignUp() {
-  const url = "http://localhost:8080/api/users";
+  const url = "https://wepadel.onrender.com//api/users";
   const navigate = useNavigate();
 
   const [user, setUser] = useState({

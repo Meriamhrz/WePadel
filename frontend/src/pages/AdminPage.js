@@ -49,7 +49,7 @@ const AdminPage = () => {
 
   const fetchCourts = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/courts");
+      const response = await axios.get("https://wepadel.onrender.com//api/courts");
       console.log("Courts API response:", response.data);
   
       // Check if the response.data.courts is an array
@@ -69,7 +69,7 @@ const AdminPage = () => {
   const fetchCoaches = async () => {
     console.log("Fetching coaches...");
     try {
-      const response = await axios.get("http://localhost:8080/api/coaches");
+      const response = await axios.get("https://wepadel.onrender.com//api/coaches");
       console.log("Coaches fetched:", response.data);
   
       // Check if the response data is an array
@@ -89,7 +89,7 @@ const AdminPage = () => {
   const handleAddCourt = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/api/courts", newCourt, {
+      const response = await axios.post("https://wepadel.onrender.com//api/courts", newCourt, {
         withCredentials: true, // Ensure cookies are sent
       });
       setCourts([...courts, response.data]);
@@ -107,7 +107,7 @@ const AdminPage = () => {
     console.log("Attempting to delete court with ID:", id);
     if (!window.confirm("Are you sure you want to delete this court?")) return;
     try {
-      await axios.delete(`http://localhost:8080/api/courts/${id}`);
+      await axios.delete(`https://wepadel.onrender.com//api/courts/${id}`);
       console.log("Court deleted successfully");
       setCourts(courts.filter((court) => court._id !== id));
       alert("Court deleted successfully!");
@@ -121,7 +121,7 @@ const AdminPage = () => {
     e.preventDefault();
     console.log("Adding coach with data:", newCoach);
     try {
-      const response = await axios.post("http://localhost:8080/api/coaches", newCoach);
+      const response = await axios.post("https://wepadel.onrender.com//api/coaches", newCoach);
       console.log("Coach added:", response.data);
       setCoaches([...coaches, response.data]);
       setNewCoach({ name: "", Ranking: "", image: "", description: "", price: "" });
@@ -136,7 +136,7 @@ const AdminPage = () => {
     console.log("Attempting to delete coach with ID:", id);
     if (!window.confirm("Are you sure you want to delete this coach?")) return;
     try {
-      await axios.delete(`http://localhost:8080/api/coaches/${id}`);
+      await axios.delete(`https://wepadel.onrender.com//api/coaches/${id}`);
       console.log("Coach deleted successfully");
       setCoaches(coaches.filter((coach) => coach._id !== id));
       alert("Coach deleted successfully!");
@@ -168,8 +168,8 @@ const AdminPage = () => {
         : { ...selectedCourt, availability: [...selectedCourt.availability, newTimeSlot] };
 
       const response = isCoach
-        ? await axios.put(`http://localhost:8080/api/coaches/${selectedCoach._id}`, updatedEntity)
-        : await axios.put(`http://localhost:8080/api/courts/${selectedCourt._id}`, updatedEntity);
+        ? await axios.put(`https://wepadel.onrender.com//api/coaches/${selectedCoach._id}`, updatedEntity)
+        : await axios.put(`https://wepadel.onrender.com//api/courts/${selectedCourt._id}`, updatedEntity);
 
       if (isCoach) {
         setCoaches(coaches.map((coach) => (coach._id === selectedCoach._id ? response.data : coach)));

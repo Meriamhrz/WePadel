@@ -14,7 +14,7 @@ const ManageReservations = () => {
     const fetchReservations = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:8080/api/reservations", {
+        const response = await axios.get("https://wepadel.onrender.com//api/reservations", {
           withCredentials: true,
         });
         console.log("Reservations fetched:", response.data);
@@ -33,7 +33,7 @@ const ManageReservations = () => {
   const liberateCourt = async (reservationId) => {
     try {
       const response = await axios.put(
-        `http://localhost:8080/api/reservations/liberate/${reservationId}`,
+        `https://wepadel.onrender.com//api/reservations/liberate/${reservationId}`,
         {},
         {
           withCredentials: true,

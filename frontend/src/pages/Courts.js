@@ -25,7 +25,7 @@ const Courts = () => {
           throw new Error("User not authenticated. Please log in.");
         }
         const headers = { Authorization: `Bearer ${token}` };
-        const response = await axios.get("http://localhost:8080/api/courts", {
+        const response = await axios.get("https://wepadel.onrender.com//api/courts", {
           headers,
           withCredentials: true,
         });
@@ -85,7 +85,7 @@ const Courts = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:8080/api/reservations",
+        "https://wepadel.onrender.com//api/reservations",
         {
           courtId: selectedCourt._id,
           userId: reservationDetails.userId,

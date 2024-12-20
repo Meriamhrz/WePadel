@@ -29,7 +29,7 @@ function Shop() {
         const headers = token ? { Authorization: `Bearer ${token}` } : {};
         console.log(headers);
 
-        const response = await axios.get("http://localhost:8080/api/products", {
+        const response = await axios.get("https://wepadel.onrender.com//api/products", {
           headers, // Send token if available
           withCredentials: true, // Include cookies with the request
         });

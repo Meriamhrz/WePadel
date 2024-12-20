@@ -21,7 +21,7 @@ const Services = () => {
           return;
         }
 
-        const response = await api.get("http://localhost:8080/api/coaches", {
+        const response = await api.get("https://wepadel.onrender.com//api/coaches", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -71,7 +71,7 @@ const Services = () => {
       }
 
       const response = await api.post(
-        "http://localhost:8080/api/coach-reservations",
+        "https://wepadel.onrender.com//api/coach-reservations",
         {
           coachId: selectedCoach._id,
           userId: reservationDetails.userId,
@@ -91,7 +91,7 @@ const Services = () => {
       setSelectedCoach(null);
 
       await api.put(
-        `http://localhost:8080/api/coaches/${selectedCoach._id}`,
+        `https://wepadel.onrender.com//api/coaches/${selectedCoach._id}`,
         {
           availability: selectedCoach.availability.filter(
             (slot) => slot !== `${reservationDetails.date}T${reservationDetails.time}`
@@ -104,7 +104,7 @@ const Services = () => {
         }
       );
 
-      const refreshedCoaches = await api.get("http://localhost:8080/api/coaches", {
+      const refreshedCoaches = await api.get("https://wepadel.onrender.com//api/coaches", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

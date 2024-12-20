@@ -47,7 +47,7 @@ const Cart = () => {
   const handleCheckout = async () => {
     try {
       const response = await axios.post(
-        'http://localhost:8080/api/checkout',
+        'https://wepadel.onrender.com//api/checkout',
         {
           cartItems: products.map((item) => ({
             name: item.brand, 

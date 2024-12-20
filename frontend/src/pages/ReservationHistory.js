@@ -11,7 +11,7 @@ const ReservationHistory = () => {
     const fetchReservations = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:8080/api/reservations", {
+        const response = await axios.get("https://wepadel.onrender.com//api/reservations", {
           withCredentials: true, // Enable sending cookies with the request
         });
         setReservations(response.data); // Set reservations data

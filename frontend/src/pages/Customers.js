@@ -7,7 +7,7 @@ import Cookies from "js-cookie"; // Import js-cookie
 import LayoutPagesAdmin from "../components/Layouts/LayoutPagesAdmin"
 
 function Customers() {
-  const url = "http://localhost:8080/api/users";
+  const url = "https://wepadel.onrender.com//api/users";
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");

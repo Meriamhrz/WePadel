@@ -24,7 +24,7 @@ const ManageCoachReservations = () => {
         }
 
         console.log("Fetching coach reservations...");
-        const response = await axios.get("http://localhost:8080/api/coach-reservations", {
+        const response = await axios.get("https://wepadel.onrender.com//api/coach-reservations", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -71,7 +71,7 @@ const ManageCoachReservations = () => {
 
       // Cancel the reservation
       const response = await axios.delete(
-        `http://localhost:8080/api/coach-reservations/${reservationId}`,
+        `https://wepadel.onrender.com//api/coach-reservations/${reservationId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -89,7 +89,7 @@ const ManageCoachReservations = () => {
         console.log("Updated availability to add back:", updatedAvailability);
 
         const updateResponse = await axios.put(
-          `http://localhost:8080/api/coaches/${coachId}`,
+          `https://wepadel.onrender.com//api/coaches/${coachId}`,
           { availability: updatedAvailability },
           {
             headers: {
